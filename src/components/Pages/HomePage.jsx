@@ -2,16 +2,9 @@ import { Button, Flex, Title, Text, Input } from '@mantine/core';
 import { useReducer, useState } from 'react';
 import { todoReducer } from '../../reducers/todoReducer';
 
-const INITIALSTATE = {
-
-}
-
 export const HomePage = () => {
-    
     const [todoState, dispatch] = useReducer(todoReducer, []);
-
     const [newTask, setNewTask] = useState('');
-
     const handleAddTask = () => {
         dispatch({
             type: 'ADD_TODO',

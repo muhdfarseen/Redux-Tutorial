@@ -4,20 +4,15 @@ import { addtodo, deletetodo } from '../../Redux/Slice/TodoSlice';
 import { useState } from 'react';
 
 export const WithReduxToolKit = () => {
-
     const todos = useSelector((state) => state.todo);
-
     const dispatch = useDispatch();
-
     const [newTask, setNewTask] = useState('');
-
     const handleAddTask = () => {
         if (newTask) {
             dispatch(addtodo(newTask));
             setNewTask('');
         }
     };
-
     const handleDeleteTask = (id) => {
         dispatch(deletetodo(id));
     };

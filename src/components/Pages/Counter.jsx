@@ -12,9 +12,7 @@ export const Counter = () => {
     return (
         <Flex p={100} h={'100vh'} align={'center'} direction={'column'}>
             <Title mb={50}>Counter</Title>
-
             <Text size='xl'>{count}</Text>
-
             <Flex mt={25} gap={10}>
                 <Button color='blue' onClick={() => dispatch(increment())}>
                     Increment

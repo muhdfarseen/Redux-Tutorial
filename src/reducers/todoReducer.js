@@ -10,4 +10,4 @@ export const todoReducer = (state, action) => {
 };
 
 
-dispatch({type:'ADD_TODO', payload: {todo : "Asdas",id:232}})
+
