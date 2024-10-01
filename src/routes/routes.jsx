@@ -5,6 +5,7 @@ import { lazy, Suspense } from 'react';
 import { LoadingScreen } from '../components/Pages/LoadingScreen';
 import { WithReduxToolKit } from '../components/Pages/WithReduxToolKit';
 import { Counter } from '../components/Pages/Counter';
+import { DataFetchExample } from '../components/Pages/DataFetchExample';
 
 const HomePage = lazy(
     () =>
@@ -36,7 +37,15 @@ export const router = createBrowserRouter([
         path: 'counter',
         element: (
             <Suspense fallback={<LoadingScreen />}>
-                <Counter/>
+                <Counter />
+            </Suspense>
+        )
+    },
+    {
+        path: 'datafetch',
+        element: (
+            <Suspense fallback={<LoadingScreen />}>
+                <DataFetchExample />
             </Suspense>
         )
     },
