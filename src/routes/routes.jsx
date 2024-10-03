@@ -6,6 +6,8 @@ import { LoadingScreen } from '../components/Pages/LoadingScreen';
 import { WithReduxToolKit } from '../components/Pages/WithReduxToolKit';
 import { Counter } from '../components/Pages/Counter';
 import { DataFetchExample } from '../components/Pages/DataFetchExample';
+import { WithTankStackQuery } from '../components/Pages/WithTankStackQuery';
+import { WithRTKQuery } from '../components/Pages/WithRTKQuery';
 
 const HomePage = lazy(
     () =>
@@ -46,6 +48,22 @@ export const router = createBrowserRouter([
         element: (
             <Suspense fallback={<LoadingScreen />}>
                 <DataFetchExample />
+            </Suspense>
+        )
+    },
+    {
+        path: 'tankstackquery',
+        element: (
+            <Suspense fallback={<LoadingScreen />}>
+                <WithTankStackQuery />
+            </Suspense>
+        )
+    },
+    {
+        path: 'rtkquery',
+        element: (
+            <Suspense fallback={<LoadingScreen />}>
+                <WithRTKQuery />
             </Suspense>
         )
     },
