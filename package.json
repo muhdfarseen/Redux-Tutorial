@@ -8,6 +8,7 @@
         "build": "vite build",
         "lint": "eslint .",
         "preview": "vite preview",
+        "test": "vitest",
         "prettier": "prettier --write .",
         "prepare": "husky"
     },
@@ -39,6 +40,7 @@
         "postcss-preset-mantine": "^1.17.0",
         "postcss-simple-vars": "^7.0.1",
         "prettier": "3.3.3",
-        "vite": "^5.4.1"
+        "vite": "^5.4.1",
+        "vitest": "^2.1.2"
     }
 }
